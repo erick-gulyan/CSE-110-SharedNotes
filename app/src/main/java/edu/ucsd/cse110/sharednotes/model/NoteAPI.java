@@ -17,11 +17,11 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 
 public class NoteAPI {
-    // TOD: Implement the API using OkHttp!
-    // TOD: - getNote (maybe getNoteAsync)
-    // TOD: - putNote (don't need putNotAsync, probably)
-    // TOD: Read the docs: https://square.github.io/okhttp/
-    // TOD: Read the docs: https://sharednotes.goto.ucsd.edu/docs
+    // TODO: Implement the API using OkHttp!
+    // TODO: - getNote (maybe getNoteAsync)
+    // TODO: - putNote (don't need putNotAsync, probably)
+    // TODO: Read the docs: https://square.github.io/okhttp/
+    // TODO: Read the docs: https://sharednotes.goto.ucsd.edu/docs
 
     private volatile static NoteAPI instance = null;
 

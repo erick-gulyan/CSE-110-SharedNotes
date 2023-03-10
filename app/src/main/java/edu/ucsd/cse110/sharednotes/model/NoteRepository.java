@@ -1,5 +1,7 @@
 package edu.ucsd.cse110.sharednotes.model;
 
+import android.util.Log;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -96,9 +98,9 @@ public class NoteRepository {
     // ==============
 
     public LiveData<Note> getRemote(String title) {
-        // TOD: Implement getRemote!
-        // TOD: Set up polling background thread (MutableLiveData?)
-        // TOD: Refer to TimerService from https://github.com/DylanLukes/CSE-110-WI23-Demo5-V2.
+        // TODO: Implement getRemote!
+        // TODO: Set up polling background thread (MutableLiveData?)
+        // TODO: Refer to TimerService from https://github.com/DylanLukes/CSE-110-WI23-Demo5-V2.
 
         // Start by fetching the note from the server _once_ and feeding it into MutableLiveData.
         // Then, set up a background thread that will poll the server every 3 seconds.
@@ -114,6 +116,8 @@ public class NoteRepository {
 
         noteLiveData = new MutableLiveData<>();
         noteLiveData.postValue(note);
+
+        Log.d("postval", String.valueOf(note));
         registerUpdateListener(noteAPI, title);
 
         noteData = new MediatorLiveData<>();
@@ -134,7 +138,7 @@ public class NoteRepository {
     }
 
     public void upsertRemote(Note note) {
-        // TOD: Implement upsertRemote!
+        // TODO: Implement upsertRemote!
         //throw new UnsupportedOperationException("Not implemented yet");
         ExecutorService backgroundThreadExecutor = Executors.newSingleThreadExecutor();
         Future<?> future;

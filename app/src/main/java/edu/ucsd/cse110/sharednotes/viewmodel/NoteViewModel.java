@@ -23,7 +23,7 @@ public class NoteViewModel extends AndroidViewModel {
     }
 
     public LiveData<Note> getNote(String title) {
-        // TOD: use getSynced here instead?
+        // TODO: use getSynced here instead?
         // The returned live data should update whenever there is a change in
         // the database, or when the server returns a newer version of the note.
         // Polling interval: 3s.
@@ -34,7 +34,7 @@ public class NoteViewModel extends AndroidViewModel {
     }
 
     public void save(Note note) {
-        // TOD: try to upload the note to the server.
+        // TODO: try to upload the note to the server.
         repo.upsertLocal(note);
     }
 }
