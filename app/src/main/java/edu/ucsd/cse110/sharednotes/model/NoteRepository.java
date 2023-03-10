@@ -80,7 +80,7 @@ public class NoteRepository {
     }
 
     public void upsertLocal(Note note) {
-        //here note.updatedAt = System.currentTimeMillis();
+        note.updatedAt = System.currentTimeMillis();
         dao.upsert(note);
     }
 
