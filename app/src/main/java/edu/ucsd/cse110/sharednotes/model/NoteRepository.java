@@ -120,10 +120,10 @@ public class NoteRepository {
         Log.d("postval", String.valueOf(note));
         registerUpdateListener(noteAPI, title);
 
-        noteData = new MediatorLiveData<>();
-        noteData.addSource(noteLiveData, noteData::postValue);
+//        noteData = new MediatorLiveData<>();
+//        noteData.addSource(noteLiveData, noteData::postValue);
 
-        return noteData;
+        return noteLiveData;
 
         //throw new UnsupportedOperationException("Not implemented yet");
     }

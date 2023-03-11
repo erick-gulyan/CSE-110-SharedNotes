@@ -91,7 +91,7 @@ public class NoteAPI {
                 .url("https://sharednotes.goto.ucsd.edu/notes/" + encodedTitle)
                 .method("GET", null)
                 .build();
-
+        Log.i("Request", request.toString());
         try (var response = client.newCall(request).execute()) {
             assert response.body() != null;
             var body = response.body().string();
@@ -100,7 +100,7 @@ public class NoteAPI {
                 Log.i("EMPTY", "no note in server");
                 return null;
             }
-
+            Log.i("Response", body);
             bodyLines = body.split("[,]", 0);
             newTitle = bodyLines[0];
             newMessage = bodyLines[1];
